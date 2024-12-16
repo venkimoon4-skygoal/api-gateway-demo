@@ -9,6 +9,10 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/v4/users", UsersRouters);
 
+app.get("/", (req, res) => {
+  res.send("(. .> < !Express Server Is Running! >  < . .)");
+});
+
 app.listen(4000, () => {
   console.log("Listening to port 4000");
 });
